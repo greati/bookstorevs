@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1AC2108F-7A77-48DE-BDE9-0A9F38A6D6CC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Livraria</RootNamespace>
+    <AssemblyName>Livraria</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\LIVRARIA.mdf" />
+    <Content Include="App_Data\LIVRARIA_log.ldf">
+      <DependentUpon>LIVRARIA.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Themes\TemaAzul\cssTemaAzul.css" />
+    <Content Include="App_Themes\TemaLaranja\cssTemaLaranja.css" />
+    <Content Include="App_Themes\TemaPreto\cssTemaPreto.css" />
+    <Content Include="App_Themes\TemaVerde\cssTemaVerde.css" />
+    <Content Include="css\reset.css" />
+    <Content Include="css\style.css" />
+    <Content Include="js\funcoes.js" />
+    <Content Include="View\Carrinho.aspx" />
+    <Content Include="View\ConsultarAcervo.aspx" />
+    <Content Include="View\EditarLivro.aspx" />
+    <Content Include="View\EditarPerfil.aspx" />
+    <Content Include="View\GerenciarCategorias.aspx" />
+    <Content Include="View\GerenciarLivros.aspx" />
+    <Content Include="View\GerenciarUsuarios.aspx" />
+    <Content Include="View\Index.aspx" />
+    <Content Include="View\InserirLivros.aspx" />
+    <Content Include="View\InserirUsuario.aspx" />
+    <Content Include="View\Login.aspx" />
+    <Content Include="View\MapaSite.aspx" />
+    <Content Include="View\MostrarLivro.aspx" />
+    <Content Include="View\ResultadosBusca.aspx" />
+    <Content Include="View\VerPerfil.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\AutoridadeDAO.cs" />
+    <Compile Include="DAL\LivrariaDataContext.cs" />
+    <Compile Include="Model\Autoridade.cs" />
+    <Compile Include="Model\Carrinho.cs" />
+    <Compile Include="Model\CarrinhoLivro.cs" />
+    <Compile Include="Model\CategoriaLivro.cs" />
+    <Compile Include="Model\Livro.cs" />
+    <Compile Include="Model\Usuario.cs" />
+    <Compile Include="DAL\CarrinhoDAO.cs" />
+    <Compile Include="DAL\CategoriaLivroDAO.cs" />
+    <Compile Include="DAL\LivroDAO.cs" />
+    <Compile Include="DAL\UsuarioDAO.cs" />
+    <Compile Include="Model\UsuarioAutoridade.cs" />
+    <Compile Include="Padrao.Master.cs">
+      <DependentUpon>Padrao.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Padrao.Master.designer.cs">
+      <DependentUpon>Padrao.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\Carrinho.aspx.cs">
+      <DependentUpon>Carrinho.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Carrinho.aspx.designer.cs">
+      <DependentUpon>Carrinho.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ConsultarAcervo.aspx.cs">
+      <DependentUpon>ConsultarAcervo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ConsultarAcervo.aspx.designer.cs">
+      <DependentUpon>ConsultarAcervo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditarLivro.aspx.cs">
+      <DependentUpon>EditarLivro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\EditarLivro.aspx.designer.cs">
+      <DependentUpon>EditarLivro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditarPerfil.aspx.cs">
+      <DependentUpon>EditarPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\EditarPerfil.aspx.designer.cs">
+      <DependentUpon>EditarPerfil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\GerenciarCategorias.aspx.cs">
+      <DependentUpon>GerenciarCategorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\GerenciarCategorias.aspx.designer.cs">
+      <DependentUpon>GerenciarCategorias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\GerenciarLivros.aspx.cs">
+      <DependentUpon>GerenciarLivros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\GerenciarLivros.aspx.designer.cs">
+      <DependentUpon>GerenciarLivros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\GerenciarUsuarios.aspx.cs">
+      <DependentUpon>GerenciarUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\GerenciarUsuarios.aspx.designer.cs">
+      <DependentUpon>GerenciarUsuarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\InserirLivros.aspx.cs">
+      <DependentUpon>InserirLivros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\InserirLivros.aspx.designer.cs">
+      <DependentUpon>InserirLivros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\InserirUsuario.aspx.cs">
+      <DependentUpon>InserirUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\InserirUsuario.aspx.designer.cs">
+      <DependentUpon>InserirUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\MapaSite.aspx.cs">
+      <DependentUpon>MapaSite.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\MapaSite.aspx.designer.cs">
+      <DependentUpon>MapaSite.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\MostrarLivro.aspx.cs">
+      <DependentUpon>MostrarLivro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\MostrarLivro.aspx.designer.cs">
+      <DependentUpon>MostrarLivro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\ResultadosBusca.aspx.cs">
+      <DependentUpon>ResultadosBusca.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\ResultadosBusca.aspx.designer.cs">
+      <DependentUpon>ResultadosBusca.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\VerPerfil.aspx.cs">
+      <DependentUpon>VerPerfil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\VerPerfil.aspx.designer.cs">
+      <DependentUpon>VerPerfil.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\sistema\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Padrao.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\TemaLaranja\skinTemaLaranja.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\TemaAzul\skinTemaAzul.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\TemaVerde\skinTemaVerde.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\TemaPreto\skinTemaPreto.skin" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53745</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

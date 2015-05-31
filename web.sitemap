@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="" title="Livraria"  description="Nosso site">
+    
+    <siteMapNode url="" title="Público"  description="Ambiente público da livraria">
+      <siteMapNode url="~/view/Index.aspx" title="Início"  description="Página inicial"/>
+      <siteMapNode url="~/view/ConsultarAcervo.aspx" title="Consultar acervo"  description="Livros disponíveis no site"/>
+      <siteMapNode url="~/view/Carrinho.aspx" title="Carrinho de compras"  description="Abrir carrinho de compras"/>
+      <siteMapNode url="~/view/MostrarLivro.aspx" title="Mostrar livro"  description="Detalha um livro do acervo"/>
+      <siteMapNode url="~/view/MapaSite.aspx" title="Mapa do site"  description="Ver páginas do site"/>
+      <siteMapNode url="~/view/InserirUsuario.aspx" title="Cadastre-se"  description="Crie uma conta em nossa livraria"/>
+      <siteMapNode url="~/view/Login.aspx" title="Login"  description="Entrar no sistema"/>
+      <siteMapNode url="~/view/ResultadosBusca.aspx" title="Resultados da busca"  description="Busque pelo título de um livro!"/>
+    </siteMapNode>
+
+    <siteMapNode url="" title="Painel do usuário"  description="Ambiente de usuário da livraria">
+      <siteMapNode url="~/view/GerenciarLivros.aspx" title="Meus Livros"  description="Minha coleção de livros">
+        <siteMapNode url="~/view/InserirLivros.aspx" title="Novo livro"  description="Adicionar livro" />
+        <siteMapNode url="~/view/EditarLivro.aspx" title="Editar livro"  description="Atualizar dados de um livro"/>
+      </siteMapNode>
+      <siteMapNode url="" title="Minha conta"  description="Meus dados pessoais">
+        <siteMapNode url="~/view/VerPerfil.aspx" title="Ver perfil"  description="Meu perfil atual" />
+        <siteMapNode url="~/view/EditarPerfil.aspx" title="Editar perfil"  description="Atualizar ou excluir meu perfil" />
+      </siteMapNode>
+    </siteMapNode>
+
+    <siteMapNode url="" title="Administração"  description="Ambiente dos administradores">
+        <siteMapNode url="~/view/GerenciarCategorias.aspx" title="Gerenciar categorias"  description="Manipula as categorias do sistema"></siteMapNode>
+        <siteMapNode url="~/view/GerenciarUsuarios.aspx" title="Gerenciar usuários"  description="Manipula os usuários do sistema"></siteMapNode>
+    </siteMapNode>
+      
+  </siteMapNode>
+</siteMap>

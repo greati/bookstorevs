@@ -1,0 +1,131 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Padrao.Master.cs" Inherits="Livraria.Padrao" %>
+
+<!DOCTYPE html>
+
+<html>
+	<head runat="server">
+		
+		<meta charset="UTF-8"/>
+		
+		<!--[if  IE 8]>
+			<style type="text/css">
+				#wrap {display:table;}
+			</style>
+		<![endif]-->
+
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+
+		<link type="text/css" rel="stylesheet" href="~/css/reset.css"/>
+        <link type="text/css" rel="stylesheet" href="~/css/style.css"/>
+		<link href='http://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300|Yanone+Kaffeesatz|Dosis|Ubuntu+Condensed|Crimson+Text|Amaranth|Coustard|Doppio+One|Homenaje|Ubuntu' rel='stylesheet' type='text/css'/>
+	    <script type="text/javascript" src="../js/funcoes.js"></script>
+    </head>
+
+	<body>
+		<form id="form1" runat="server">
+		<div id="all">
+		
+			<div id="wrap">
+			
+				<div id="main">
+					<header id="pageHeader">
+
+                        <img id="logo" src="../images/sistema/logo.png"/>
+
+                        <span id="slogan">Livre-se de seus livros e compre outros!</span>
+
+                        <nav id="escolherTema">
+                            <span>TEMA</span>
+                            <ul>
+                                <li><asp:Button ID="btLaranja" runat="server" Text="" UseSubmitBehavior="False" OnClick="BtLaranja_Evento" EnableTheming="False"></asp:Button></li>
+                                <li><asp:Button ID="btVerde" runat="server" Text="" UseSubmitBehavior="False" OnClick="BtVerde_Evento" EnableTheming="False"></asp:Button></li> 
+                                <li><asp:Button ID="btPreto" runat="server" Text="" UseSubmitBehavior="False" OnClick="BtPreto_Evento" EnableTheming="False"></asp:Button></li> 
+                                <li><asp:Button ID="btAzul" runat="server" Text="" UseSubmitBehavior="False" OnClick="BtAzul_Evento" EnableTheming="False"></asp:Button></li>     
+                            </ul>
+                        </nav>
+
+                        <nav id="navPrincipal">
+                            <ul>
+                                <li><a href="Index.aspx">Início</a></li>
+                                <li><a href="ConsultarAcervo.aspx">Acervo</a></li>
+                                <!--<li><a href="#">Sobre</a></li>-->
+                                <li><a href="MapaSite.aspx">Mapa do site</a></li>
+                                <!--<li><a href="#">Contato</a></li>-->
+                            </ul>
+                        </nav>
+
+                        <div id="painelUsuarioHeader">
+
+                            <% Livraria.DAL.CarrinhoDAO carrinhoDAO = new Livraria.DAL.CarrinhoDAO();
+                               int numLivrosCarrinho = 0;
+                               if (Request.Cookies["idCarrinho"] != null)
+                               {
+                                   Livraria.Model.Carrinho carrinho = carrinhoDAO.getCarrinhoById(Convert.ToInt32(Request.Cookies["idCarrinho"].Value.ToString()));
+                                   if (carrinho != null) numLivrosCarrinho = carrinho.Livros.Count;//to change
+                               }     
+                            %>
+
+                            <a id="carrinhoHeader" href="Carrinho.aspx"><%= numLivrosCarrinho %></a>
+                            
+
+                                <%if (Session["usuarioLogado"] == null){%>
+
+                                    <div id="usuarioVisitante">
+                                        <span>Tudo bem, visitante?</span><br />
+                                        <a href="Login.aspx">Login</a>
+                                        <a href="InserirUsuario.aspx">Cadastrar</a>
+                                    </div>
+
+                                <%}else{%>
+
+                                    <% 
+                                        Livraria.Model.Usuario usuarioLogado = ((Livraria.Model.Usuario) Session["usuarioLogado"]); 
+                                       %>
+
+                                    <div id="usuarioLogado">
+                                        <img id="avatarHeader" src="../images/<%= usuarioLogado.ImageUrl %>" />
+                                        <div>
+                                            <span>Olá, <%= usuarioLogado.Username  %> <asp:Button ID="Button1" runat="server" Text="Logout" UseSubmitBehavior="False" OnClick="Logout_event" EnableTheming="False"></asp:Button></span><br />
+                                            <a href="GerenciarLivros.aspx">Painel</a>
+                                            <a href="EditarPerfil.aspx">Editar Perfil</a>
+                                        </div>
+                                        
+                                    </div>
+
+                                <%} %>
+
+                        </div>
+
+                        <div id="buscaHeader">
+                            <asp:TextBox ID="tbBusca" runat="server"></asp:TextBox>
+                            <asp:Button ID="btBuscar" runat="server" Text="Buscar" OnClick="Buscar_Evento" UseSubmitBehavior="False"></asp:Button>
+                        </div>
+
+					</header>
+					
+					<div id="content">
+                        <span class="onde_estou">ONDE ESTOU?</span>
+                        <asp:SiteMapPath ID="SiteMapPath1" runat="server" CssClass="sitePath">
+                            <CurrentNodeStyle CssClass="pathCurrent" />
+                            <PathSeparatorStyle CssClass="pathSeparator" />
+                        </asp:SiteMapPath>
+					    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+					</div>
+				
+					<div id="sidebar">
+                        <asp:ContentPlaceHolder ID="sidebar" runat="server">
+						</asp:ContentPlaceHolder>
+					</div>
+				</div>
+				
+			</div>
+			
+			<footer id="pageFooter">
+				<p>Desenvolvido por Vitor Greati, turma 4.4401.1V, IFRN-ZN</p>
+			</footer>
+		</div>
+        </form>
+	</body>
+</html>

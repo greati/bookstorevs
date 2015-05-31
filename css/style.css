@@ -1,0 +1,1004 @@
+﻿html,body, #wrap{
+	height:100%;
+}
+			
+body > #wrap{
+	height:auto;
+	min-height:100%;
+}
+			
+body{
+	background:#eee;
+	display:table;
+	width:100%;
+}
+
+h2.page-title
+{
+    font-family:Oswald;
+    font-size:19px;
+    padding-bottom:20px;
+}
+			
+#all{
+	width:1024px;
+	min-width:1024px;
+	max-width:1024px;
+	background:#fff;
+	border-radius:10px;
+	margin:0 auto;
+	margin-top:15px;
+	padding:10px;
+	box-shadow:0px 0px 8px #999;
+	margin-bottom:15px;
+}
+
+/* Header
+-------------------------------------*/
+#pageHeader{
+	width:1024px;
+	max-width:1024px;
+	min-width:1024px;
+	height:130px;
+	clear:both;
+	padding:0;
+	border-radius:5px;
+}
+			
+#pageHeader h1{
+	color:#FFF;
+	font-size:18px;
+	font-family:'century gothic';
+	position:relative;
+	top:50px;
+	margin-left:20px;
+}
+
+/* Botões escolher tema
+----------------------------------*/
+#escolherTema{
+    position:absolute;  
+    margin-left:604px;
+    margin-top:10px;  
+}
+#escolherTema li{
+    float:left;
+    margin-right:3px;
+}
+
+#escolherTema li input{
+    width:16px;
+    height:16px;
+    border:1px solid #333;
+    cursor:pointer;    
+}
+
+#escolherTema{
+    font-size:9px;
+    font-family:Oswald;
+    color:#333;
+    display:inline;
+}  
+
+#escolherTema #btAzul{
+    background:#0097C9;
+}
+#escolherTema #btLaranja{
+    background:#FF8400;
+}
+#escolherTema #btPreto{
+    background:#000;
+}
+#escolherTema #btVerde{
+    background:#090;
+}
+/* Logo e slogan
+----------------------------------*/
+#logo{
+    position:absolute;
+    margin-top:15px;
+    margin-left:15px;
+    width:208px;
+    height:100px;
+}
+
+#slogan{
+    position:absolute;
+    font-family:oswald;
+    color:#fff;
+    font-size:14px;
+    margin-top:20px;
+    margin-left:298px;
+}
+
+/* Menu Header (Principal)
+----------------------------------*/
+#navPrincipal{
+    position:relative;
+    float:right;
+    margin-top:13px;
+    margin-right:10px;
+}
+
+#navPrincipal ul{
+    list-style:none;
+}
+
+#navPrincipal ul li{
+    float:left;
+    line-height:1.5em;
+}
+
+#navPrincipal ul li a{
+    font-family:oswald;
+    font-size:14px;
+    color:#FFF;
+    text-transform:uppercase;
+    margin-right:6px;
+    text-decoration:none;
+}
+
+#navPrincipal ul li a:hover{
+    color:#000;
+}
+
+/* Barra de Busca
+--------------------------------*/
+#buscaHeader{
+    float:right;
+    position:absolute;
+    margin-top:65px;
+    margin-left:298px;
+}
+
+#buscaHeader input[type=text]{
+    padding:12px 5px;
+    border:none;
+    font-size:18px;
+    font-family:ubuntu;
+    color:#333;
+    margin:0;
+    width:300px;
+    min-width:300px;
+    max-width:300px;
+}
+
+#buscaHeader input[type="button"]{
+    padding:13px 10px 12px 10px;
+    background:#DE0206;
+    font-family:oswald;
+    text-transform:uppercase;
+    border:none;
+    color:#fff;
+    position:relative;
+    top:0px;
+}
+
+/* Painel usuário header
+---------------------------------*/
+#painelUsuarioHeader{
+    float:right;
+    position:absolute;
+    margin-top:60px;
+    left:1110px;
+    font-family:oswald;
+    font-size:16px;
+    color:#FFF;
+}
+
+#painelUsuarioHeader span{
+    line-height:2em;
+}
+
+#painelUsuarioHeader a, #painelUsuarioHeader input[type="button"]{
+    text-decoration:none;
+    font-size:12px;
+    color:#fff;
+    margin-right:5px;
+    background:transparent;
+    font-family:oswald;
+    border:none;
+    display:inline;
+}
+
+#painelUsuarioHeader input[type="button"]{
+    padding:0;
+    cursor:pointer;
+    margin-left:5px;
+    color:#000;
+}
+
+#painelUsuarioHeader div#usuarioVisitante{
+    position:absolute;
+    width:200px;
+    min-width:200px;
+    max-width:200px;
+    margin-left:-198px;
+}
+
+#painelUsuarioHeader a#carrinhoHeader{
+    display:block;
+    width:79px;
+    min-width:79px;
+    max-width:79px;
+    height:53px;
+    min-height:53px;
+    max-height:53px;
+    background:url("../images/sistema/carrinho.png") no-repeat;
+    float:right;
+    text-align:center;
+    vertical-align:middle;
+    padding-top:8px;
+    padding-left:0px;
+    font-size:17px;
+    transition:1s;
+    margin-top:5px;
+    position:absolute;
+}
+
+#painelUsuarioHeader a#carrinhoHeader:hover, #painelUsuarioHeader span#textoCarrinho:hover + a#carrinhoHeader{
+    transition:1s;
+    margin-left:5px;
+}
+
+#textoCarrinho{
+    position:absolute;
+    line-height:0.5em;
+    opacity:0;
+    cursor:pointer;
+    transition:1s;
+    font-size:10px;
+    color:#fff;
+    margin-left:80px;
+    margin-top:5px;
+}
+
+#painelUsuarioHeader a#carrinhoHeader:hover + span#textoCarrinho{
+    opacity:1;
+    transition:1s;
+}
+
+#usuarioLogado{
+    position:absolute;
+    width:200px;
+    min-width:200px;
+    max-width:200px;
+    margin-left:-207px;
+}
+
+#usuarioLogado div{
+    float:right;
+    margin-right:25px;
+}
+
+#usuarioLogado #avatarHeader{
+    width:41px;
+    max-width:41px;
+    min-width:41px;
+    height:41px;
+    min-height:41px;
+    max-height:41px;
+    float:left;
+    position:absolute;
+    top:8px;
+    border-radius:5px;
+}
+
+/* Content definitions
+---------------------------------*/
+			
+#main{
+	overflow:auto;
+	padding-bottom:50px; /* deve ter a mesma altura do rodapé */
+	width:1024px;
+	min-width:1024px;
+	max-width:1024px;
+	float:right;
+}
+			
+#content{
+	width:800px;
+	min-width:800px;
+	max-width:800px;
+	float:right;
+	margin-top:20px;
+}
+
+/* Formulários
+--------------------------------*/
+.form_padrao{
+    min-width:100%;
+    max-width:100%;
+    color:#000;
+    font-family:oswald;
+    font-size:13px;    
+}
+
+.form_padrao label{
+    display:block;
+    width:100px;
+    min-width:100px;
+    max-width:100px;
+}
+
+.form_padrao .btForm{
+    background:#DE0206;
+    border:none;
+    padding:5px;
+    color:#fff;
+    font-size:12px;
+    font-family:oswald;
+    cursor:pointer;
+    text-decoration:none;
+}
+
+.form_padrao input[type=text], .form_padrao select, .form_padrao textarea, .form_padrao input[type=file],
+.form_padrao input[type=password]{
+    margin-bottom:10px;
+    padding:5px;
+    font-family:ubuntu;
+    margin-top:5px;
+}
+
+.form_padrao input[type="checkbox"]{
+    float:left;
+}
+
+.form_padrao label{
+    display:block;
+    width:100px;
+    min-width:100px;
+    max-width:100px;
+    margin-bottom:5px;
+}
+
+.form_padrao .checkboxlist
+{
+    margin:10px 0;
+}
+
+.form_padrao .fileupload
+{
+    margin:10px 0;
+}
+
+.avatar_form{
+    margin-top:10px;
+}
+
+/* Index definitions
+--------------------------------*/
+#index section{
+    margin-bottom:50px;
+}
+
+#index section h3{
+    font-family:Oswald;
+    font-size:18px;
+    border-bottom:1px solid #FF8400;
+    padding-bottom:8px;
+    margin-bottom:10px;
+}
+
+.clear{clear:both;}
+
+#indexUltimosLivros{
+    clear:both;
+    width:100%;
+}
+
+#indexUltimosLivros img{
+    width:140px;
+    min-width:140px;
+    max-width:140px;
+    height:150px;
+    min-height:150px;
+    max-height:150px;
+}
+
+#indexUltimosLivros h4, #indexUltimosLivros a{
+    font-family:Oswald;
+    font-size:14px;
+    padding-bottom:5px;
+    color:#FF8400;
+    text-decoration:none;
+}
+
+#indexUltimosLivros .autor{
+    font-family:Oswald;
+    font-size:12px;
+}
+
+#indexUltimosLivros .preco{
+    font-family:Oswald;
+    font-size:12px;
+    color:#DE0206;
+    margin-top:5px;
+    font-size:14px;
+    display:block;
+}
+
+#indexUltimosLivros article{
+	width:200px;
+    min-width:200px;
+    max-width:200px;
+	height:220px;
+	min-height:220px;
+	max-height:220px;
+	float:left;	
+	text-align:center;
+	margin-bottom:30px;
+}
+
+#index #registre{
+    width:400px;
+    min-width:400px;
+    max-width:400px;
+    float:right;
+}
+
+#index #registre p{
+    font-family:Oswald;
+    color:#333;
+    font-size:14px;
+}
+
+#index #registre .btCadastro{
+    border-radius:5px;
+    background:#FF8400;
+    padding:10px 60px;
+    text-transform:uppercase;
+    font-family:oswald;
+    font-size:18px;
+    color:#fff;
+    text-decoration:none;
+    position:relative;
+    top:50px;
+}
+
+
+#index #registre .btCadastro:first-of-type{
+    margin-right:10px;
+
+}
+
+#indexUsuariosRecentes{
+    width:350px;
+    min-width:350px;
+    max-width:350px;
+    float:left;
+}
+
+#indexUsuariosRecentes table{
+    width:100%;
+}
+
+#indexUsuariosRecentes th{
+    font-family:Oswald;
+    color:#999;
+    font-size:14px;
+    text-align:right;
+}
+
+#indexUsuariosRecentes img{
+    width:40px;
+    height:40px;
+    border-radius:5px;
+}
+
+#indexUsuariosRecentes .username{
+    font-family:Oswald;
+    vertical-align:middle;
+    text-align:right;
+    font-size:16px;
+}
+
+/* Form login
+--------------------------------*/	
+.form_login{
+	min-width:300px;
+    max-width:300px;
+    float:left;
+    color:#000;
+    font-family:oswald;
+    font-size:13px;
+    position:relative;
+    top:28px;    			
+}
+
+.form_login input[type=text], .form_login select, .form_login textarea, .form_login input[type=file],
+.form_login input[type=password]{
+    margin-bottom:10px;
+    padding:5px;
+    font-family:ubuntu;
+    margin-top:5px;
+    margin-left:5px;
+}
+
+.form_login input[type="submit"]{
+    background:#DE0206;
+    border:none;
+    padding:5px;
+    color:#fff;
+    font-size:12px;
+    font-family:oswald;
+    cursor:pointer;
+    text-decoration:none;
+    position:relative;
+    top:-20px;
+    left:-6px;
+}
+
+.texto_logar{display:none;}
+
+
+#convite_cadastro{
+    float:right;
+    width:400px;
+    min-width:400px;
+    max-width:400px;
+    border-left:2px solid #DE0206;
+    height:150px;
+    padding-left:70px;
+    padding-top:30px;   
+}
+
+#convite_cadastro h3{
+    font-size:20px;
+    font-family:oswald;
+}
+
+#convite_cadastro p{
+    font-size:14px;
+    font-family:oswald;
+    line-height:3em;
+    color:#666;
+}
+
+#convite_cadastro a{
+    border-radius:5px;
+    background:#FF8400;
+    padding:10px 20px;
+    text-transform:uppercase;
+    font-family:oswald;
+    font-size:18px;
+    color:#fff;
+    text-decoration:none;
+    position:relative;
+    top:20px;
+}
+/* Mostrar livro
+--------------------------------*/
+#content .livroCompleto {
+				
+}
+#content .livroCompleto h1{
+	font-family:"oswald";
+	font-size:24px;
+	margin-bottom:30px;
+}
+#content .livroCompleto #info_livro{
+	float:right;
+	width:550px;
+	min-width:550px;
+	max-width:550px;
+}
+			
+#content .livroCompleto #info_livro #detalhes_livro, #detalhesPerfil{
+	font-family:'ubuntu';
+	position:relative;
+	top:40px;
+}
+			
+#content .livroCompleto #info_livro #detalhes_livro td:nth-child(1), #detalhesPerfil td:nth-child(1){
+	background:#eee;
+}
+
+#content .livroCompleto #info_livro #financeiro{
+    border-top:2px solid #ccc;
+	border-bottom:2px solid #ccc;
+	height:60px;
+}
+			
+#content .livroCompleto #info_livro .preco{
+	color:#DE0206;
+	font-size:35px;
+	font-family: Oswald;
+	position:relative;
+	top:12px;
+}
+			
+#content .livroCompleto #info_livro .preco span{
+	font-size:25px;
+}
+			
+#content .livroCompleto #info_livro a.bt_comprar, #content .livroCompleto #info_livro a.bt_fav, .bt_nao_comprar{
+	background:#DE0206;
+	padding:10px;
+	color:#FFF;
+	font-size:12px;
+	font-family:oswald;
+	text-transform:uppercase;
+	display:block;
+	width:150px;
+	text-decoration:none;
+	text-align:right;
+	float:right;
+	position:relative;
+	top:4px;
+}
+
+.bt_nao_comprar{opacity:0.5; cursor:default;}
+
+#content .livroCompleto #info_livro a.bt_fav{
+    background:#FFCC00;
+    width:100px;
+}
+			
+#content .livroCompleto #info_livro a.bt_comprar:hover{
+	background:#FF0004;
+}
+
+#content .livroCompleto #info_livro a.bt_fav:hover{
+    background:#FFEA00;    
+}
+			
+#content .livroCompleto #info_livro a.bt_comprar span, #content .livroCompleto #info_livro a.bt_fav span, .bt_nao_comprar span{
+	font-size:20px;
+	position:relative;
+	top:3px;
+}
+
+#content .livroCompleto #pre_info{
+    margin-top:10px;
+    font-family:oswald;
+    font-size:14px;
+    color:#333;
+}
+
+#content .livroCompleto #pre_info .separador
+{
+    color:#FF8400;
+    padding:0 5px;    
+}
+
+#content .livroCompleto #pre_info span{
+    line-height:2em;
+}
+
+#content .livroCompleto #info_livro span{
+    
+}
+
+#content .livroCompleto #info_livro table, #detalhesPerfil{
+    width:100%;
+    font-family:oswald;
+    font-size:12px;    
+    margin-top:25px;
+    border:1px solid #FFF;
+}
+
+#content .livroCompleto #info_livro table tr, #detalhesPerfil tr{
+    line-height:3em;
+    border-bottom:1px solid #e1e1e1;
+    border-top:1px solid #e1e1e1;
+}
+
+#content .livroCompleto #info_livro table th, #detalhesPerfil th{
+    color:#DE0206;
+    font-size:13px;
+}
+
+#content .livroCompleto #info_livro table td, #detalhesPerfil td{
+    color:#666;
+    padding:0 10px;
+    background:#ebebeb;
+
+}
+			
+#content .livroCompleto .img_livro{
+	float:left;
+	width:210px;
+	height:270px;
+	border:1px solid #000;
+}
+
+/*
+Tabelas (padrão)
+----------------------------------*/
+.tabela_padrao{
+    min-width:100%;
+    max-width:100%;
+    font-family:oswald;
+}
+
+.tabela_padrao th{
+    border-bottom:2px solid #FF8400;
+    line-height:2em;
+    font-size:14px;
+}
+
+.tabela_padrao td{
+    font-size:14px;
+    color:#666;
+    text-align:center;
+    vertical-align:middle;
+    padding-top:10px;
+}
+
+.tabela_padrao a{
+    color:#333;
+    text-decoration:none;    
+}
+
+/* Tabela detalhes perfil 
+observar que utilizei estilos das
+regras anteriores
+-----------------------------------*/
+
+table#detalhesPerfil{
+    float:right;
+    width:650px;
+    min-width:650px;
+    max-width:650px;
+    margin-top:-36px;
+}
+
+.livrosUsuario{
+    margin-top:20px;
+
+}
+
+.livrosUsuario th{
+    border-bottom:1px solid #FF8400;
+}
+
+#avatarPerfil{
+    width:120px;
+    height:120px;
+}
+
+/* Tabela para gerenciar livros
+-----------------------------------*/
+div.tabela_gerenciar table{
+    font-family:oswald;
+    font-size:13px;
+    min-width:800px;
+    max-width:800px;
+}
+
+div.tabela_gerenciar table td
+{
+    vertical-align:middle;
+    text-align:center;
+}
+
+div.tabela_gerenciar table th{
+    line-height:2em;
+    padding:0 5px;
+    border-bottom:2px solid #FF8400;
+}
+
+.controles_grid{
+    color:#fff; 
+    text-decoration:none;
+    background:#FF8400;
+    padding:2px 3px;
+    margin-left:-5px;
+    margin-right:5px;
+}
+
+.controles_grid:hover{
+    background:#FF9900;
+}
+
+div#controles_adicionais{
+    float:right;
+    margin-top:40px    
+}
+
+div#controles_adicionais .btDisabled{
+    opacity:.5;    
+}
+
+div#controles_adicionais input, div#controles_adicionais a{
+    background:#DE0206;
+    border:none;
+    padding:5px;
+    color:#fff;
+    font-size:12px;
+    font-family:oswald;
+    cursor:pointer;
+    text-decoration:none;
+}
+
+div#controles_adicionais input:hover{
+    background:#FF0004;
+}
+
+.gridSelected {
+    background:#eee;
+}
+
+div.tabela_gerenciar table th a{
+    color:#DE0206;
+    text-decoration:none;
+    font-size:14px;
+} 
+
+div.tabela_gerenciar table td{
+    padding:10px 5px;
+    line-height:1.5em;
+}
+
+div.tabela_gerenciar table td:nth-child(1){
+    width:40px;
+}
+
+div.tabela_gerenciar table td:nth-child(2){
+    width:260px;
+}
+
+div.tabela_gerenciar table td:nth-child(3){
+    width:140px;
+}
+
+div.tabela_gerenciar table td:nth-child(4){
+    width:100px;
+}
+
+.mini_info{
+    line-height:1em;
+    margin-top:10px;
+    font-family:oswald;
+    font-size:12px;
+    text-align:right;
+}
+
+.masterDetailsCb{
+    width:150px;
+    padding:5px;
+    font-family:ubuntu;
+    margin-bottom:15px;
+}
+			
+/*-------------------------------
+Sidebar
+---------------------------------*/
+			
+#sidebar{
+	width:200px;
+	min-width:200px;
+	max-width:200px;
+	float:left;
+	margin-top:5px;
+}
+			
+/*Oswald|Open+Sans+Condensed:300|Yanone+Kaffeesatz|Dosis|Ubuntu+Condensed|Crimson+Text|Amaranth|Coustard|Doppio+One|Homenaje|Ubuntu'*/
+			
+#sidebar h2{
+	font-size: 18px;
+	font-family:'oswald';
+	text-transform:uppercase;
+	color:#FF8400;
+	padding-bottom:5px;
+}
+
+#sidebar .widget{
+    margin-top:15px;    
+}
+			
+#sidebar #navCategorias li a{
+	display:block;
+	padding:4px 0 0px 0px;
+	text-decoration:none;
+	font-family:"oswald";
+	font-size:14px;
+	color:#666;
+	line-height:2em;
+	border-bottom:1px solid #eee;
+}
+			
+#sidebar #navCategorias li a:hover{
+	color:#DE0206;
+	border-bottom:1px solid #ccc;
+}
+
+/*---------------------------------
+TreeView on MapaSite
+-----------------------------------*/
+
+#treeASP div.treeView{
+    position:relative;
+    top:-15px;
+    padding-left:0;    
+}
+
+#treeASP .treeRoot{
+    font-family:"oswald";
+	font-size:14px;
+	color:#DE0206;  
+}
+
+#treeASP .treeParent{
+    font-family:"oswald";
+	font-size:13px;
+	color:#000;
+}
+
+#treeASP .treeLeaf{
+    font-family:"oswald";
+	font-size:12px;
+	color:#999;
+}
+
+#treeASP .treeSelected{
+    font-family:"oswald";
+	font-size:12px;
+	color:#666;
+}
+
+.sitePath{
+    margin-bottom:20px;
+    display:block;
+    font-family:oswald;
+    font-size:12px;
+    color:#666;
+}
+
+.onde_estou
+{
+    font-size:10px;
+    text-transform:uppercase;
+    font-family:oswald;
+    display:block;
+    margin-bottom:6px;
+    }
+
+.sitePath a{
+    text-decoration:none;
+    color:#666; 
+}
+
+.sitePath .pathCurrent{
+    color:#333;
+}
+
+.sitePath .pathSeparator{
+    margin-bottom:10px;
+    font-family:oswald;
+    font-size:12px;
+    color:#FF8400;
+}
+
+
+/*---------------------------------
+Footer
+-----------------------------------*/
+			
+#pageFooter{
+	width:1014px;
+	min-width:1014px;
+	max-width:1014px;
+	clear:both;
+	position:relative;
+	margin-top:-40px; /* valor negativo da altura do rodapé */
+	height:40px;
+	clear:both;
+	background:#FF8400;
+	border-radius:5px;
+	font-family:Oswald;
+	font-size:12px;
+	text-align:right;
+	padding:10px 5px 0 5px;
+	color:#fff;
+}
+			
+/*Opera Fix*/
+body:before {
+	content:"";
+	height:100%;
+	float:left;
+	width:0;
+	margin-top:-32767px;/
+}

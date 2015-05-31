@@ -1,0 +1,107 @@
+﻿#pageHeader{
+    background:#000;
+}
+
+#sidebar h2{
+    color:#000;
+}
+
+#content .livroCompleto #pre_info .separador
+{
+    color:#000;    
+}
+
+.sitePath .pathSeparator{
+    color:#000;
+}
+
+#index section h3{
+    border-bottom:1px solid #000;
+}
+
+#indexUltimosLivros h4{
+    color:#000;
+}
+
+#indexUltimosLivros .preco{
+    color:#333333;
+}
+
+#index #registre .btCadastro{
+    background:#333333;
+}
+
+#convite_cadastro{
+    border-left:2px solid #333333; 
+}
+
+#convite_cadastro a{
+    background:#333333;
+}
+
+#content .livroCompleto #info_livro .preco{
+	color:#333333;
+}
+
+#content .livroCompleto #info_livro a.bt_comprar{
+    background:#333333;
+}
+
+#content .livroCompleto #info_livro a.bt_comprar:hover{
+	background:#000;
+}
+
+#content .livroCompleto #pre_info .separador
+{
+    color:#000;
+}
+
+#content .livroCompleto #info_livro table th, #detalhesPerfil th
+{
+    color:#333333;
+}
+
+.tabela_padrao th{
+    border-bottom:2px solid #000;
+}
+
+#navPrincipal ul li a:hover{
+    color:#ccc;
+}
+
+
+.livrosUsuario th{
+    border-bottom:1px solid #000;
+}
+
+div.tabela_gerenciar table th{
+    border-bottom:2px solid #000;
+}
+
+#treeASP .treeRoot{
+	color:#333333;  
+}
+
+.form_padrao .btForm{
+    background:#000;
+}
+
+.form_login input[type="submit"]{
+    background:#333333;
+}
+
+div.tabela_gerenciar table th a{
+    color:#333333;
+} 
+
+#sidebar #navCategorias li a:hover{
+	color:#333333;
+}
+
+#painelUsuarioHeader input[type="button"]{
+    color:#333333;
+}
+
+#pageFooter{
+	background:#000;
+}
